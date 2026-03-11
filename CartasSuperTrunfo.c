@@ -74,9 +74,14 @@ int main() {
     printf("Nome da cidade: %s \n", nome1);
     printf("Número de habitantes: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB(Produto interno bruto): %.2f\n", pib1);
+    printf("PIB(Produto interno bruto): %.2f bilhões de reais\n", pib1);
     printf("Número de pontos turisticos: %d\n", ptsT1);
+    
+    double densiPopulacionalA = populacao1 / area1; //Calcula a densidade populacional da cidade A
+    printf("Densidade Populacional: %.2f hab/km²\n", densiPopulacionalA);   
 
+    double pibPercapita = pib1/populacao1;  //Calcula o PIB Percapita da cidade A
+    printf("PIB Percapita: %.2f reais\n", pibPercapita);
 
     printf("\nCarta 2: \n");    // exibe os dados cadastrados na primeira carta
     
@@ -88,12 +93,11 @@ int main() {
     printf("PIB(Produto interno bruto): %.2f bilhões de reais\n", pib2);
     printf("Número de pontos turisticos: %d\n", ptsT2);
 
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    double densiPopulacionalB = populacao2 / area2; //Calcula a densidade populacional da cidade B
+    printf("Densidade Populacional: %.2f hab/km²\n", densiPopulacionalB);
+
+    double pibPercapitaB = pib2/populacao2; //Calcula o PIB Percapita da cidade B
+    printf("PIB Percapita: %.2f reais\n", pibPercapitaB);
 
     return 0;
 }
