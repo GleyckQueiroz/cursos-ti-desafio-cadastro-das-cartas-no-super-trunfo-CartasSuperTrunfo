@@ -105,7 +105,18 @@ int main() {
     superPoderB = populacao2 + area2 + pib2 + (float)ptsT2 + pibPercapitaB + (1.0/densiPopulacionalB);
 
     printf("\n*** Comparação de cartas ***\n");
+    printf("\nAtributo: Densidade populacional\n");
+    
+    printf("\nCarta 1: %s: %.2f hab/1000km²\n", nome1, densiPopulacionalA*1000);
+    printf("Carta 2: %s: %.2f hab/1000km²\n", nome2, densiPopulacionalB*1000);
 
+    if(densiPopulacionalA < densiPopulacionalB){
+        printf("\nResultado: Carta 1 (%s) venceu!", nome1);
+    }else{
+        printf("\nResultado: Carta 2 (%s) venceu!", nome2);
+    }
+
+    /*
     printf("\nPopulação: Carta %d venceu\n", populacao1 > populacao2);
     printf("Àrea: Carta %d venceu\n", area1 > area2);
     printf("PIB: Carta %d venceu\n", pib1 > pib2);
@@ -113,6 +124,7 @@ int main() {
     printf("Densidade Populacional: Carta %d venceu\n", densiPopulacionalA < densiPopulacionalB);
     printf("PIB per Capita: Carta %d venceu\n", pibPercapita > pibPercapitaB);
     printf("Super Poder: Carta %d venceu\n", superPoderA > superPoderB);
+    */
 
     return 0;
 }
